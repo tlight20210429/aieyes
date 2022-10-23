@@ -6,6 +6,7 @@ ImgShowDialog::ImgShowDialog(QWidget *parent) :
     ui(new Ui::ImgShowDialog)
 {
     ui->setupUi(this);
+
 }
 
 ImgShowDialog::~ImgShowDialog()
@@ -16,6 +17,13 @@ ImgShowDialog::~ImgShowDialog()
 void ImgShowDialog::showImage(const QPixmap &pix)
 {
     ui->lab_image->setPixmap(pix);
+}
+
+void ImgShowDialog::showImage(const QImage &pix)
+{
+    QPixmap mp;
+    mp = mp.fromImage(pix);
+    ui->lab_image->setPixmap(mp);
 }
 
 void ImgShowDialog::showGayImage(const QPixmap &pix)

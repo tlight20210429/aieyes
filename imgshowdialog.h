@@ -15,6 +15,7 @@ public:
     explicit ImgShowDialog(QWidget *parent = nullptr);
     ~ImgShowDialog();
     void showImage(const QPixmap &pix);
+    void showImage(const QImage &pix);
     void showGayImage(const QPixmap &pix);
     void showGayOneImage(const QPixmap &pix);
 private:
